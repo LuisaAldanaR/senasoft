@@ -8,7 +8,7 @@ import { Cita } from './Cita';
 })
 export class CrudCitaService {
 
-  API: string = 'http://localhost/Veterinaria/data/cita.php';
+  API: string = 'http://localhost/backendVeterinaria/data/cita.php';
 
   constructor (private clienteHttp : HttpClient) { }
 
