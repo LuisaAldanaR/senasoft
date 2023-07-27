@@ -1,0 +1,43 @@
+<div class="card">
+    <div class="card-header">
+        Listar Citas
+    </div>
+    <div class="card-body">
+        <div class="table-responsive-sm">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Nombre de mascota</th>
+                        <th scope="col">Fecha de cita</th>
+                        <th scope="col">Hora de cita</th>
+                        <th scope="col">Motivo de la cita</th>
+                        <th scope="col">Nombre del dueño</th>
+                        <th scope="col">Contacto del dueño</th>
+                        <th scope="col">Estado </th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let cita of citas; let iControl = index">
+                        <td scope="row">{{cita.id}}</td>
+                        <td>{{cita.nombreMascota}}</td>
+                        <td>{{cita.fecha}}</td>
+                        <td>{{cita.hora}}</td>
+                        <td>{{cita.motivo}}</td>
+                        <td>{{cita.nombreDuenio}}</td>
+                        <td>{{cita.numeroDuenio}}</td>
+                        <td>{{cita.estado}}</td>
+                        <td>
+                            <a class="btn btn-warning" routerLink="/editar-cita/{{cita.id}}">Editar</a>
+                            &nbsp;
+                            <a class="btn btn-danger" (click)="borrarCita(cita.id, iControl)" role="button">Eliminar</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+        
+    </div>
+</div>

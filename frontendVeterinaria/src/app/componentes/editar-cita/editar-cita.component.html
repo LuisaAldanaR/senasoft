@@ -1,0 +1,70 @@
+
+<div class="card">
+    <div class="card-header">
+        Editar cita
+    </div>
+    <div class="card-body">
+        <form (ngSubmit)="enviarDatos()" [formGroup]="formularioDeCitas">
+            
+            <div class="mb-3">
+                <label for="" class="form-label">ID</label>
+                <input type="text" readonly
+                    class="form-control" name="" id="" formControlName="id" aria-describedby="helpId" placeholder="">
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">Nombre de mascota:</label>
+                <input type="text"
+                    class="form-control" name="" id="" formControlName="nombreMascota" aria-describedby="helpId" placeholder="">
+            </div>
+
+            <div class="mb-3">
+              <label for="" class="form-label">Fecha de cita:</label>
+              <input type="date"
+                class="form-control" name="" id="" formControlName="fecha" aria-describedby="helpId" placeholder="">
+            </div>
+
+            <div class="mb-3">
+              <label for="" class="form-label">Hora de cita:</label>
+              <input type="time"
+                class="form-control" name="" id="" formControlName="hora" aria-describedby="helpId" placeholder="">
+            </div>
+
+            <div class="mb-3">
+              <label for="" class="form-label">Motivo de la cita:</label>
+              <input type="text"
+                class="form-control" name="" id="" formControlName="motivo" aria-describedby="helpId" placeholder="">
+            </div>
+
+            <div class="mb-3">
+              <label for="" class="form-label">Nombre del dueño:</label>
+              <input type="text"
+                class="form-control" name="" id="" formControlName="nombreDuenio" aria-describedby="helpId" placeholder="">
+            </div>
+
+            <div class="mb-3">
+              <label for="" class="form-label">Contacto del dueño:</label>
+              <input type="tel"
+                class="form-control" name="" id="" formControlName="numeroDuenio" aria-describedby="helpId" placeholder="">
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">Estado:</label>
+                  <br>
+                <select name="" id="" formControlName="estado">
+                  <option value="Asignada">Asignada</option>
+                  <option value="En atención">En atención</option>
+                  <option value="Completada">Completada</option>
+                  <option value="Cancelada">Cancelada</option>
+                </select>
+                <br>
+              </div>
+
+            <div class="btn-group" role="group" aria-label="">
+                <button type="submit" class="btn btn-success">Guardar</button>&nbsp;
+                <a href="../listar-cita" class="btn btn-danger">Cancelar</a>
+            </div>
+
+        </form>
+    </div>
+</div>
